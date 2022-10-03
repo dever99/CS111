@@ -1,0 +1,46 @@
+/*************************************************************************
+ *  Compilation:  javac WindChill.java
+ *  Execution:    java WindChill 35.0 10.0
+ *
+ *  @author: Anirudh Deveram, ard238@scareltmail.rutgers.edu, ard238 
+ *
+ *  That takes two double command-line arguments temperature and velocity 
+ *  and prints the wind chill (a double) according to the following:
+ *
+ *  w = 35.74 + 0.6215 * T + (0.4275 * T - 35.75) v^0.16
+ *
+ *  % java WindChill 35.0 10.0
+ *  27.445420765619037
+ *
+ *  The formula is not valid if T is larger than 50 in absolute value or if 
+ *  v is larger than 120 or less than 3.
+ *
+ *  Assume the inputs are valid values
+ *
+ *
+ *************************************************************************/
+
+public class WindChill 
+{
+
+    public static void main(String[] args) 
+    {
+
+	// WRITE YOUR CODE HERE
+        // t represents temperature in fahrenheit
+        // v represents the wind speed in mph
+        double t = Double.parseDouble(args[0]);
+        double v = Double.parseDouble(args[1]);
+        double fin = 0; 
+
+        
+        double sqrt = Math.pow(v,0.16);
+        fin = 35.74+0.6215*t+(0.4275*t-35.75)*sqrt;
+    
+        System.out.println(fin);
+
+
+        //double sqrt = Math.pow(v,0.16);
+        
+    }
+}
