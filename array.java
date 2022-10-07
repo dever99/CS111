@@ -82,7 +82,7 @@ public class array
         }
         double avg = su /doubArray.length; 
         System.out.println(su+" "+avg);
-        double great = 0; 
+        int great = 0; 
         for(int b = 0; b < doubArray.length; b++)
         {
             if(doubArray[b] > avg)
