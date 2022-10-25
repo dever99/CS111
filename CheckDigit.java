@@ -1,8 +1,29 @@
-package test;
-import java.util.*; 
-public class CheckDigit {
+/*************************************************************************
+ *  Compilation:  javac CheckDigit.java
+ *  Execution:    java CheckDigit 020131452
+ *
+ *  @author: Anirudh Deveram ard238 ard238@scarletmail.rutgers.edu
+ *
+ *  Takes a 12 or 13 digit integer as a command line argument, then computes
+ *  and displays the check digit
+ *
+ *  java CheckDigit 048231312622
+ *  0
+ *
+ *  java CheckDigit 9780470458310
+ *  0
+ * 
+ *  java CheckDigit 9780470454310
+ *  8
+ * 
+ *  Print only the check digit character, nothing else.
+ *
+ *************************************************************************/
+
+public class CheckDigit 
+{
     public static void main(String[] args) {
-        long num = 9780470454310L;
+        long num = Long.parseLong(args[0]);
         int leftSum = 0;
         int rightSum = 0;
         long temp =  num;
@@ -22,19 +43,18 @@ public class CheckDigit {
             } else {
                 leftSum += digit;
             }
-            System.out.println("at pos " + counter + "the digit is " + digit);
+           
             temp = temp / 10;
         }
-        System.out.println("left sum total: " + leftSum);
-        System.out.println("right sum total: " + rightSum);
+       
         int lSum1 = leftSum % 10;
-        System.out.println(lSum1);
+      
         int rSum1 = rightSum % 10;
-        System.out.println(rSum1);
+      
         int rSum2 = rSum1 * 3;
-        System.out.println(rSum2);
+      
         int rSum3 = rSum2 % 10;
-        System.out.println(rSum3);
+     
         int finSum = (lSum1 + rSum3)%10;
         System.out.println(finSum);
     }

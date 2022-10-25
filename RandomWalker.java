@@ -2,7 +2,7 @@
  *  Compilation:  javac RandomWalker.java
  *  Execution:    java RandomWalker 10
  *
- *  @author:
+ *  @author: Anirudh Deveram ard238 ard238@scarletmail.rutgers.edu 
  *
  * The program RandomWalker that takes an int command-line argument n
  * and simulates the motion of a random walk for n steps. Print the
