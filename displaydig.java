@@ -2,7 +2,7 @@ public class displaydig
 {
     public static void main(String[]args)
     {
-        int num = Integer.parseInt(args[0]);
+        int num = 1234; //Integer.parseInt(args[0]);
         
 
         /*
