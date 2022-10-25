@@ -59,6 +59,24 @@ public class PolygonTransform {
     // Rotates the given polygon theta degrees counterclockwise, about the origin. 
     public static void rotate(double[] x, double[] y, double theta) 
     {
+	    double [] rotX = new double[x.length]; 
+    	double [] rotY = new double[y.length]; 
+    	double angle = theta; 
+    	for(int i = 0; i < rotX.length; i++)
+    	{
+    		 double tempX = x[i]; 
+    		 double tempY = y[i];   
+    		 double mutX = (tempX*Math.cos(angle)-tempY*Math.sin(angle)); 
+    		 rotX[i] = mutX; 
+    		
+    	}
+    	for(int j = 0; j < rotY.length; j++)
+    	{
+    		double tempX = x[j]; 
+   		 	double tempY = y[j];   
+   		 	double mutX = (tempX*Math.sin(angle)-tempY*Math.cos(angle)); 
+   		 	rotX[j] = mutX; 
+    	}	
 
     }
 
